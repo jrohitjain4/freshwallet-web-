@@ -1,91 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { 
-  Shield, 
-  Eye, 
-  EyeOff, 
-  Smartphone, 
-  Lock, 
-  ChevronDown, 
-  Phone,
-  ArrowRight
-} from 'lucide-react';
-import { apiPost } from '../lib/api';
-import { useAuth } from '../context/AuthContext';
-import { resolveHome, GuestOnly } from '../components/auth/RouteGuards';
-import { digitsOnly, formatIndianMobile, isValidIndianMobile } from '../lib/phone';
-import type { AuthUser } from '../lib/auth';
-import fintechIllustration from '../assets/merchant_welcome_3d.png';
-import logo from '../assets/logo.svg';
-
-export default function LoginPage() {
-  const { t } = useTranslation();
-  const navigate = useNavigate();
-  const { login } = useAuth();
-
-  const [phone, setPhone] = useState('');
-  const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
-
-  const handleIdentifierChange = (val: string) => {
-    if (/[a-zA-Z@\.]/.test(val)) {
-      setPhone(val);
-    } else {
-      setPhone(formatIndianMobile(val));
-    }
-  };
-
-  const onSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
-
-    let loginIdentifier = phone.trim();
-    const isEmail = loginIdentifier.includes('@') || /[a-zA-Z]/.test(loginIdentifier);
-
-    if (isEmail) {
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(loginIdentifier)) {
-        setError('Please enter a valid email address');
-        return;
-      }
-    } else {
-      const digits = digitsOnly(loginIdentifier);
-      if (!isValidIndianMobile(loginIdentifier)) {
-        setError(t('invalidMobile') || 'Please enter a valid 10-digit mobile number');
-        return;
-      }
-      loginIdentifier = digits;
-    }
-
-    if (!password) {
-      setError('Password is required');
-      return;
-    }
-
-    setLoading(true);
-    try {
-      const data = await apiPost<{ user: AuthUser; tokens: { accessToken: string; refreshToken: string } }>(
-        '/auth/login',
-        { phone: loginIdentifier, password }
-      );
-      login(data);
-      navigate(resolveHome(data.user));
-    } catch (err) {
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { 
-  Shield, 
-  Eye, 
-  EyeOff, 
-  Smartphone, 
-  Lock, 
-  ChevronDown, 
-  Phone,
-  ArrowRight
-} from 'lucide-react';
+import { Shield, Eye, EyeOff, Lock, Phone, ArrowRight } from 'lucide-react';
 import { apiPost } from '../lib/api';
 import { useAuth } from '../context/AuthContext';
 import { resolveHome, GuestOnly } from '../components/auth/RouteGuards';
@@ -166,7 +82,7 @@ export default function LoginPage() {
             </div>
             <button
               onClick={() => navigate('/register/welcome')}
-              className="bg-primary hover:bg-orange-600 text-[11px] lg:text-xs font-extrabold text-white px-5 py-2.5 rounded-full shadow-sm hover:shadow-orange-200/60 transition-all duration-200"
+              className="bg-primary hover:bg-orange-600 text-[11px] lg:text-xs font-extrabold text-white px-5 py-2.5 rounded-full shadow-sm transition-all duration-200"
             >
               Start registration
             </button>
@@ -176,7 +92,7 @@ export default function LoginPage() {
         {/* MAIN */}
         <main className="flex-1 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 lg:gap-6 lg:px-6 lg:py-6 items-start lg:items-center">
 
-          {/* ── Desktop only: Left copywriting column ── */}
+          {/* Desktop only: Left copywriting column */}
           <div className="hidden lg:flex flex-col text-left justify-center">
             <div className="inline-flex items-center gap-1.5 bg-orange-50 border border-orange-100 px-3.5 py-1.5 rounded-full w-fit mb-5">
               <div className="h-4 w-4 rounded-full bg-primary flex items-center justify-center text-white">
@@ -195,8 +111,14 @@ export default function LoginPage() {
             <div className="flex flex-col gap-4">
               {[
                 { icon: <Shield size={18} />, title: '100% Secure', desc: 'Bank-grade security for every transaction.' },
-                { icon: <svg className="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>, title: 'Instant Payments', desc: 'Receive money instantly, zero hassle.' },
-                { icon: <svg className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.281m5.94 2.28l-2.28 5.941" /></svg>, title: 'Grow Business', desc: 'Analytics & insights to scale fast.' },
+                {
+                  icon: <svg className="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
+                  title: 'Instant Payments', desc: 'Receive money instantly, zero hassle.'
+                },
+                {
+                  icon: <svg className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.281m5.94 2.28l-2.28 5.941" /></svg>,
+                  title: 'Grow Business', desc: 'Analytics & insights to scale fast.'
+                },
               ].map(f => (
                 <div key={f.title} className="flex gap-3 items-start">
                   <div className="flex-shrink-0 h-9 w-9 rounded-xl bg-orange-50 text-primary flex items-center justify-center">{f.icon}</div>
@@ -207,9 +129,22 @@ export default function LoginPage() {
                 </div>
               ))}
             </div>
+            <div className="grid grid-cols-2 gap-3 border-t border-gray-100 pt-6 mt-6">
+              {[['10M+', 'Merchants'], ['100%', 'Secure'], ['Instant', 'Settle'], ['24x7', 'Support']].map(([val, lbl]) => (
+                <div key={lbl} className="flex items-center gap-2">
+                  <div className="h-7 w-7 rounded-lg bg-orange-50 text-primary flex items-center justify-center">
+                    <Shield size={13} />
+                  </div>
+                  <div>
+                    <span className="text-xs font-black text-navy block leading-none">{val}</span>
+                    <span className="text-[9px] text-gray-400 font-bold">{lbl}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* ── Desktop only: Middle 3D image ── */}
+          {/* Desktop only: Middle 3D image */}
           <div className="hidden lg:flex items-center justify-center h-[580px]">
             <img
               src={fintechIllustration}
@@ -219,7 +154,7 @@ export default function LoginPage() {
             />
           </div>
 
-          {/* ── Form column (full width on mobile, right column on desktop) ── */}
+          {/* Form column — full width on mobile, right column on desktop */}
           <div className="flex flex-col w-full lg:order-last">
 
             {/* Mobile only: orange branded hero band */}
@@ -230,7 +165,7 @@ export default function LoginPage() {
                 🇮🇳 India's Most Trusted Payments
               </span>
               <h1 className="text-[28px] font-black text-white leading-snug">
-                Bharosa<br/>
+                Bharosa<br />
                 <span className="text-orange-100">Har Payment ka</span>
               </h1>
               <p className="text-[12px] text-white/70 mt-2 leading-relaxed max-w-[260px]">
@@ -239,17 +174,10 @@ export default function LoginPage() {
             </div>
 
             {/* Form card — overlaps the orange band on mobile */}
-            <div className="
-              relative -mt-7 lg:mt-0
-              mx-0 lg:mx-auto
-              w-full lg:max-w-[400px]
-              bg-white
-              rounded-t-[32px] lg:rounded-[24px]
-              px-6 pt-8 pb-10
-              lg:border lg:border-gray-100 lg:shadow-[0_20px_50px_rgba(0,0,0,0.08)]
-            ">
+            <div className="relative -mt-7 lg:mt-0 mx-0 lg:mx-auto w-full lg:max-w-[400px] bg-white rounded-t-[32px] lg:rounded-[24px] px-6 pt-8 pb-10 lg:border lg:border-gray-100 lg:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+
               <h3 className="text-2xl font-extrabold text-navy tracking-tight mb-1">Welcome Back 👋</h3>
-              <p className="text-sm text-gray-400 mb-8">Login to your FreshWallet account</p>
+              <p className="text-sm text-gray-400 mb-7">Login to your FreshWallet account</p>
 
               {error && (
                 <p className="mb-5 text-xs font-semibold text-red-600 bg-red-50 border border-red-100 p-3 rounded-xl">{error}</p>
@@ -257,7 +185,7 @@ export default function LoginPage() {
 
               <form onSubmit={onSubmit} className="flex flex-col gap-5">
 
-                {/* Phone / Email */}
+                {/* Mobile / Email */}
                 <div>
                   <label className="block text-[10px] uppercase tracking-widest font-bold text-gray-400 mb-2">Mobile / Email</label>
                   <div className="flex items-center h-[54px] rounded-2xl border border-gray-200 bg-gray-50 focus-within:border-primary focus-within:bg-white focus-within:ring-2 focus-within:ring-primary/10 transition-all px-4 gap-3">
