@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-brand: #FF6B00;
+  --color-primary: #FF6B00;
+  --color-secondary: #FF8A00;
+  --color-light-bg: #FFF7F2;
+  --color-navy: #111827;
+  --color-page: #FFFFFF;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-page);
+  color: var(--color-navy);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Glassmorphism custom classes for rich visual aesthetics */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-card-dark {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Premium spacing utility and shadows */
+.shadow-soft {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+}
+
+.shadow-premium {
+  box-shadow: 0 12px 40px rgba(255, 107, 0, 0.08);
+}
+
+/* Custom animations and background effects */
+@keyframes pulseSlow {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate(5%, 5%);
+  }
+}
+
+@keyframes pulseSlowReverse {
+  0%, 100% {
+    transform: scale(1.1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1) translate(-5%, -5%);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 15s infinite ease-in-out;
+}
+
+.animate-pulse-slow-reverse {
+  animation: pulseSlowReverse 18s infinite ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #FF8A00;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6B00;
+}
