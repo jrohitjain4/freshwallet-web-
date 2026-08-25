@@ -62,7 +62,7 @@ type ModalType = 'send' | 'expense' | 'gst' | 'addMoney' | null;
 
 const QUICK_ACTIONS = [
   { id: 'qr', icon: QrCode, labelKey: 'generateQr', color: 'text-orange-600 bg-orange-50', action: 'navigate' as const },
-  { id: 'send', icon: Send, labelKey: 'sendMoney', color: 'text-blue-600 bg-blue-50', action: 'send' as const },
+  { id: 'send', icon: Send, labelKey: 'sendMoney', color: 'text-orange-600 bg-orange-50', action: 'send' as const },
   { id: 'bills', icon: Receipt, labelKey: 'payBills', color: 'text-orange-600 bg-orange-50', action: 'send' as const },
   { id: 'expense', icon: ShoppingCart, labelKey: 'addExpense', color: 'text-red-600 bg-red-50', action: 'expense' as const },
   { id: 'gst', icon: FileText, labelKey: 'gstReports', color: 'text-amber-600 bg-amber-50', action: 'gst' as const },
@@ -435,7 +435,7 @@ export default function DashboardPage() {
         <div className="rounded-2xl border-2 border-primary bg-white p-5 shadow-sm">
           <div className="mb-4 flex items-center justify-between border-b border-gray-100 pb-3">
             <h2 className="text-lg font-bold text-navy">{t('expenseAnalytics', 'Expense Analytics')}</h2>
-            <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">
+            <span className="text-xs font-semibold text-primary bg-orange-50 px-2 py-0.5 rounded-full">
               Monthly Limit: 80%
             </span>
           </div>
@@ -449,13 +449,13 @@ export default function DashboardPage() {
                 <circle cx="50" cy="50" r="40" className="stroke-primary fill-none" strokeWidth="12"
                   strokeDasharray="113.04 251.2" strokeDashoffset="0" strokeLinecap="round" />
                 {/* Bills Circle - 30% */}
-                <circle cx="50" cy="50" r="40" className="stroke-blue-500 fill-none" strokeWidth="12"
+                <circle cx="50" cy="50" r="40" className="stroke-orange-400 fill-none" strokeWidth="12"
                   strokeDasharray="75.36 251.2" strokeDashoffset="-113.04" strokeLinecap="round" />
                 {/* Logistics Circle - 15% */}
-                <circle cx="50" cy="50" r="40" className="stroke-orange-500 fill-none" strokeWidth="12"
+                <circle cx="50" cy="50" r="40" className="stroke-amber-500 fill-none" strokeWidth="12"
                   strokeDasharray="37.68 251.2" strokeDashoffset="-188.4" strokeLinecap="round" />
                 {/* Others Circle - 10% */}
-                <circle cx="50" cy="50" r="40" className="stroke-amber-500 fill-none" strokeWidth="12"
+                <circle cx="50" cy="50" r="40" className="stroke-amber-300 fill-none" strokeWidth="12"
                   strokeDasharray="25.12 251.2" strokeDashoffset="-226.08" strokeLinecap="round" />
               </svg>
               {/* Inner Center Text */}
@@ -469,9 +469,9 @@ export default function DashboardPage() {
             <div className="flex flex-col gap-2.5 w-full max-w-[160px]">
               {[
                 { name: 'Stock Supply', percent: 45, val: '₹6.0K', color: 'bg-primary' },
-                { name: 'Utility Bills', percent: 30, val: '₹4.0K', color: 'bg-blue-500' },
-                { name: 'Logistics', percent: 15, val: '₹2.0K', color: 'bg-orange-500' },
-                { name: 'Others', percent: 10, val: '₹1.3K', color: 'bg-amber-500' },
+                { name: 'Utility Bills', percent: 30, val: '₹4.0K', color: 'bg-orange-400' },
+                { name: 'Logistics', percent: 15, val: '₹2.0K', color: 'bg-amber-500' },
+                { name: 'Others', percent: 10, val: '₹1.3K', color: 'bg-amber-300' },
               ].map((item) => (
                 <div key={item.name} className="flex items-center justify-between text-xs">
                   <div className="flex items-center gap-2">
@@ -632,8 +632,8 @@ export default function DashboardPage() {
           <div className="rounded-2xl border-2 border-primary bg-white px-5 py-[35px] shadow-sm">
             <div className="mb-4 flex items-center justify-between border-b border-gray-100 pb-3">
               <h3 className="text-base font-bold text-navy">{t('settlementStatus', 'Settlement Status')}</h3>
-              <span className="flex items-center gap-1.5 rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-bold text-blue-600">
-                <span className="h-1.5 w-1.5 rounded-full bg-blue-500 animate-pulse" />
+              <span className="flex items-center gap-1.5 rounded-full bg-orange-50 px-2.5 py-0.5 text-xs font-bold text-primary">
+                <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
                 {t('scheduled', 'Scheduled')}
               </span>
             </div>

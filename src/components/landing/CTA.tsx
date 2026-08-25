@@ -1,57 +1,72 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, MessageSquare } from 'lucide-react';
+import { ArrowRight, UserCheck, Sparkles, ShieldCheck } from 'lucide-react';
 
 export default function CTA() {
   const navigate = useNavigate();
 
   return (
-    <section className="relative w-full py-16 px-6 sm:px-12 select-none overflow-hidden">
+    <section className="relative w-full py-20 px-4 sm:px-6 lg:px-8 select-none overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="relative bg-gradient-to-r from-primary to-secondary text-white rounded-[24px] px-8 py-16 sm:p-16 text-center overflow-hidden shadow-premium"
+          transition={{ duration: 0.5 }}
+          className="relative bg-gradient-to-br from-navy via-slate-900 to-navy text-white rounded-3xl p-8 sm:p-14 text-center overflow-hidden shadow-2xl border border-white/10"
         >
           {/* Background shapes */}
-          <div className="absolute top-[-50%] right-[-20%] w-[500px] h-[500px] bg-white/10 rounded-full blur-[90px] pointer-events-none" />
-          <div className="absolute bottom-[-50%] left-[-20%] w-[500px] h-[500px] bg-black/10 rounded-full blur-[90px] pointer-events-none" />
+          <div className="absolute top-[-40%] right-[-10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute bottom-[-40%] left-[-10%] w-[500px] h-[500px] bg-secondary/15 rounded-full blur-[100px] pointer-events-none" />
+
+          {/* Badge */}
+          <div className="inline-flex items-center gap-1.5 bg-white/10 border border-white/15 px-4 py-1.5 rounded-full text-xs font-bold text-orange-400 mb-6 backdrop-blur-md">
+            <Sparkles size={13} /> Ready to elevate your financial life?
+          </div>
 
           {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4 tracking-tight leading-tight relative z-10 max-w-3xl mx-auto">
-            Start accepting digital payments for your business today
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-5 tracking-tight leading-tight relative z-10 max-w-3xl mx-auto text-white">
+            Join India&#39;s Fastest Growing Financial Network
           </h2>
 
           {/* Subheading */}
-          <p className="text-sm sm:text-base opacity-80 mb-8 max-w-xl mx-auto leading-relaxed relative z-10">
-            Join millions of retailers, merchants, and startups who rely on FreshWallet for seamless collections, settlement, and business growth.
+          <p className="text-sm sm:text-base text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed relative z-10 font-normal">
+            Start accepting zero-fee QR payments, enable soundbox audio confirmations, unlock collateral-free working capital, and safeguard your store today.
           </p>
 
           {/* Action buttons */}
-          <div className="flex flex-wrap justify-center gap-4 relative z-10">
+          <div className="flex flex-wrap justify-center items-center gap-4 relative z-10">
             <motion.button
               whileHover={{ 
-                scale: 1.05,
-                boxShadow: '0 10px 25px rgba(0, 0, 0, 0.15)'
+                scale: 1.04,
+                boxShadow: '0 12px 30px rgba(255, 107, 0, 0.35)'
               }}
-              whileTap={{ scale: 0.95 }}
+              whileTap={{ scale: 0.96 }}
               onClick={() => navigate('/login')}
-              className="flex items-center gap-2 bg-white text-primary font-extrabold px-6 py-4 rounded-2xl shadow-soft transition-all duration-300"
+              className="flex items-center gap-2 bg-gradient-to-r from-primary to-secondary hover:from-orange-600 hover:to-primary text-white font-extrabold px-8 py-4 rounded-2xl shadow-premium transition-all duration-200 cursor-pointer text-base"
             >
-              Get Started Now <ArrowRight size={18} />
+              <UserCheck size={18} /> Portal Login
             </motion.button>
 
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => navigate('/login')}
-              className="flex items-center gap-2 border border-white/30 hover:border-white/60 bg-white/5 hover:bg-white/10 text-white font-extrabold px-6 py-4 rounded-2xl transition-all duration-300"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.96 }}
+              onClick={() => navigate('/register/welcome')}
+              className="flex items-center gap-2 border border-white/20 hover:border-white/50 bg-white/5 hover:bg-white/10 text-white font-bold px-7 py-4 rounded-2xl transition-all duration-200 cursor-pointer text-base backdrop-blur-sm"
             >
-              <MessageSquare size={18} /> Contact Sales
+              Open Free Account <ArrowRight size={16} />
             </motion.button>
           </div>
+
+          {/* Bottom Security Note */}
+          <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-center gap-6 text-xs text-white/50">
+            <span className="flex items-center gap-1.5 text-emerald-400">
+              <ShieldCheck size={14} /> 100% RBI & NPCI Partner Compliant
+            </span>
+            <span>•</span>
+            <span>No Setup or Monthly Hidden Charges</span>
+          </div>
+
         </motion.div>
       </div>
     </section>

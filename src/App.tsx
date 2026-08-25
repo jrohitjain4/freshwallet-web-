@@ -27,9 +27,8 @@ export default function App() {
       <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="colored" />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navigate to="/welcome" replace />} />
-
           <Route element={<PublicRoute />}>
+            <Route path="/" element={<WelcomePage />} />
             <Route path="/welcome" element={<WelcomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/verify-otp" element={<VerifyOtpPage />} />

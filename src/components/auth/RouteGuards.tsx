@@ -20,7 +20,7 @@ export function PublicRoute() {
     );
   }
 
-  if (user && !['/welcome', '/login', '/verify-otp'].includes(location.pathname)) {
+  if (user && !['/', '/welcome', '/login', '/verify-otp'].includes(location.pathname)) {
     return <Navigate to={resolveHome(user)} replace />;
   }
 

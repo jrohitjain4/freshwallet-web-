@@ -95,7 +95,7 @@ export default function KycPage() {
 
           <div className="mb-6">
             <div className="mb-3 flex items-center gap-2 font-semibold text-navy">
-              <CreditCard size={20} className="text-blue-600" />
+              <CreditCard size={20} className="text-primary" />
               {t('panProof')}
             </div>
             {panDoc ? (
@@ -111,7 +111,7 @@ export default function KycPage() {
                   accept=".jpg,.jpeg,.png,.pdf"
                   onChange={(e) => e.target.files?.[0] && upload('PAN', e.target.files[0])}
                 />
-                <CloudUpload className="mb-2 text-blue-400" size={32} />
+                <CloudUpload className="mb-2 text-orange-400" size={32} />
                 <span>
                   <span className="text-primary">{t('clickUpload')}</span> {t('dragDrop')}
                 </span>
@@ -123,7 +123,7 @@ export default function KycPage() {
 
           <div className="mb-6">
             <div className="mb-3 flex items-center gap-2 font-semibold text-navy">
-              <Home size={20} className="text-blue-600" />
+              <Home size={20} className="text-primary" />
               {t('aadhaarProof')}
             </div>
             {aadhaarDoc ? (
@@ -139,7 +139,7 @@ export default function KycPage() {
                   accept=".jpg,.jpeg,.png,.pdf"
                   onChange={(e) => e.target.files?.[0] && upload('AADHAAR', e.target.files[0])}
                 />
-                <CloudUpload className="mb-2 text-blue-400" size={32} />
+                <CloudUpload className="mb-2 text-orange-400" size={32} />
                 <span>
                   <span className="text-primary">{t('clickUpload')}</span> {t('dragDrop')}
                 </span>
@@ -149,9 +149,9 @@ export default function KycPage() {
             )}
           </div>
 
-          <div className="mb-8 rounded-xl border border-blue-100 bg-blue-50 p-4">
+          <div className="mb-8 rounded-xl border border-orange-100 bg-orange-50/70 p-4">
             <div className="mb-2 flex items-center gap-2 font-semibold text-navy">
-              <Info size={18} className="text-blue-600" />
+              <Info size={18} className="text-primary" />
               {t('whyNeed')}
             </div>
             <p className="text-sm text-gray-600">{t('whyNeedText')}</p>
