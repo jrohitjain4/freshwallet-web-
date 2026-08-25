@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="udyamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8A00" />
+      <stop offset="100%" stop-color="#FF5100" />
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.15" />
+    </filter>
+  </defs>
+  
+  <!-- Background Card -->
+  <rect x="18" y="14" width="64" height="72" rx="10" fill="#FFFFFF" stroke="#FFD8BF" stroke-width="2" filter="url(#shadow)" />
+  
+  <!-- Top Header Bar -->
+  <path d="M 18 24 Q 18 14 28 14 L 72 14 Q 82 14 82 24 L 82 28 L 18 28 Z" fill="url(#udyamGrad)" />
+  <circle cx="50" cy="21" r="3" fill="#FFFFFF" opacity="0.9" />
+  
+  <!-- ID Photo Area -->
+  <rect x="25" y="36" width="20" height="22" rx="4" fill="#FFF2E8" stroke="#FFBB96" stroke-width="1.5" />
+  <circle cx="35" cy="44" r="4.5" fill="#FF8A00" />
+  <path d="M 28 55 Q 35 50 42 55 Z" fill="#FF8A00" />
+  
+  <!-- Details Lines -->
+  <rect x="50" y="38" width="24" height="4" rx="2" fill="#FF8A00" opacity="0.8" />
+  <rect x="50" y="46" width="18" height="3" rx="1.5" fill="#94A3B8" />
+  <rect x="50" y="53" width="22" height="3" rx="1.5" fill="#94A3B8" />
+  
+  <!-- MSME / Udyam Ribbon -->
+  <rect x="25" y="66" width="30" height="12" rx="3" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+  <text x="40" y="75" font-family="'Inter', sans-serif" font-weight="900" font-size="7" fill="#FF5100" text-anchor="middle">MSME</text>
+  
+  <!-- Verification Shield Badge -->
+  <circle cx="70" cy="72" r="12" fill="url(#shieldGrad)" filter="url(#shadow)" />
+  <path d="M 65 72 L 68.5 75.5 L 75.5 68.5" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
