@@ -59,9 +59,9 @@ export default function ContactSection() {
 
         </div>
 
-        {/* Footnote text matching Image 2 */}
+        {/* Footnote text */}
         <p className="text-xs text-gray-500 text-center max-w-4xl mx-auto leading-relaxed font-normal">
-          The company was incorporated as &quot;DocOnline Marketing and Consulting Pvt. Ltd.&quot; on June 4, 2008 under the Companies Act, 1956. The company name was changed to &quot;FreshWallet Pvt. Ltd.&quot; on September 18, 2020, to emphasise the nature of our fintech business and subsequently converted to a public limited company on June 30, 2021.
+          The company was incorporated as &quot;FreshWallet Private Limited&quot; on August 24, 2026.
         </p>
 
       </div>
