@@ -19,11 +19,11 @@ export default function InvestorRelations() {
         {/* 2-Column Metrics Card matching Image 2 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-start">
           
-          {/* Column 1: Insurance Platform */}
+          {/* Column 1: UPI Collections */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
               <span className="text-xl font-black text-primary tracking-tight">
-                FreshWallet Insurance
+                FreshWallet UPI Collections
               </span>
               <span className="w-2.5 h-2.5 rounded-full bg-primary" />
             </div>
@@ -32,12 +32,12 @@ export default function InvestorRelations() {
               {/* Stat 1 */}
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
-                  <img src={pbIcon1} alt="Insurance Premium" className="max-w-full max-h-full object-contain" />
+                  <img src={pbIcon1} alt="Transaction Volume" className="max-w-full max-h-full object-contain" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 font-medium">Insurance Premium</p>
+                  <p className="text-xs text-gray-500 font-medium">Total Transaction Volume (TPV)</p>
                   <div className="text-2xl sm:text-3xl font-black text-[#1a2b49]">
-                    ₹355* Bn <span className="text-xs font-normal text-gray-500">(Q1FY27 ARR)</span>
+                    ₹450+ Bn <span className="text-xs font-normal text-gray-500">(Q1FY27 ARR)</span>
                   </div>
                 </div>
               </div>
@@ -45,23 +45,23 @@ export default function InvestorRelations() {
               {/* Stat 2 */}
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
-                  <img src={pbIcon2} alt="Policies Sold" className="max-w-full max-h-full object-contain" />
+                  <img src={pbIcon2} alt="Active Merchants" className="max-w-full max-h-full object-contain" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 font-medium">Insurance Policies Sold</p>
+                  <p className="text-xs text-gray-500 font-medium">Active UPI Merchants</p>
                   <div className="text-2xl sm:text-3xl font-black text-[#1a2b49]">
-                    71.6 Mn <span className="text-xs font-normal text-gray-500">(Till June 2026)</span>
+                    10.5 Mn <span className="text-xs font-normal text-gray-500">(Till June 2026)</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Column 2: Lending & Credit Platform */}
+          {/* Column 2: Payouts & Settlements */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
               <span className="text-xl font-black text-primary tracking-tight">
-                FreshWallet Lending
+                FreshWallet Payouts &amp; Settlements
               </span>
               <span className="w-2.5 h-2.5 rounded-full bg-primary" />
             </div>
@@ -70,12 +70,12 @@ export default function InvestorRelations() {
               {/* Stat 3 */}
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
-                  <img src={paisaIcon1} alt="Loan Disbursals" className="max-w-full max-h-full object-contain" />
+                  <img src={paisaIcon1} alt="Payout Volume" className="max-w-full max-h-full object-contain" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 font-medium">Loan Disbursals</p>
+                  <p className="text-xs text-gray-500 font-medium">Payout Volume Processed</p>
                   <div className="text-2xl sm:text-3xl font-black text-[#1a2b49]">
-                    ₹175 Bn <span className="text-xs font-normal text-gray-500">(Q1FY27 ARR)</span>
+                    ₹180+ Bn <span className="text-xs font-normal text-gray-500">(Q1FY27 ARR)</span>
                   </div>
                 </div>
               </div>
@@ -83,12 +83,12 @@ export default function InvestorRelations() {
               {/* Stat 4 */}
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
-                  <img src={paisaIcon2} alt="Credit Score Customers" className="max-w-full max-h-full object-contain" />
+                  <img src={paisaIcon2} alt="Daily Settled Accounts" className="max-w-full max-h-full object-contain" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500 font-medium">Credit Score Customers</p>
+                  <p className="text-xs text-gray-500 font-medium">Daily Settled Merchant Accounts</p>
                   <div className="text-2xl sm:text-3xl font-black text-[#1a2b49]">
-                    60.6 Mn <span className="text-xs font-normal text-gray-500">(Till June 2026)</span>
+                    2.4 Mn <span className="text-xs font-normal text-gray-500">(Till June 2026)</span>
                   </div>
                 </div>
               </div>
@@ -100,7 +100,7 @@ export default function InvestorRelations() {
         {/* Footnote and View reports button */}
         <div className="space-y-5 pt-4">
           <p className="text-xs text-gray-400 font-normal">
-            *India Insurance Premium numbers exclude GST
+            *Transaction volumes and active merchant counts are verified across partner networks
           </p>
 
           <div>

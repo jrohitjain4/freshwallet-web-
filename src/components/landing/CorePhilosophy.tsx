@@ -17,7 +17,7 @@ export default function CorePhilosophy() {
 
             <div className="border-l-4 border-primary pl-4 py-1">
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-normal">
-                Our FreshWallet platform offerings address the large and highly under penetrated online insurance and lending markets.
+                Our FreshWallet platform offers merchants and businesses a unified payment suite to collect instant payments and process automated daily payouts.
               </p>
             </div>
           </div>
@@ -36,10 +36,10 @@ export default function CorePhilosophy() {
                   <img src={easyIcon} alt="Easy Access" className="w-6 h-6 object-contain" />
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-[#1a2b49] mb-3 leading-snug">
-                  Get easy access to insurance, credit & other financial products
+                  Accept payments instantly with dynamic UPI QRs
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-normal">
-                  We aim to create awareness amongst Indian households about the financial impact of death, disease, and damage.
+                  Generate custom dynamic UPI QR codes and accept payments instantly from any UPI app (GPay, PhonePe, Paytm) with zero processing fees.
                 </p>
               </motion.div>
 
@@ -52,10 +52,10 @@ export default function CorePhilosophy() {
                   <img src={transIcon} alt="Transparency" className="w-6 h-6 object-contain" />
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-[#1a2b49] mb-3 leading-snug">
-                  We seek to increase transparency for consumers
+                  Real-time ledger and cash flow analytics
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-normal">
-                  Through our consumer-centric approach, we seek to enable online research-based purchases of insurance and lending products. This helps consumers to make informed choices.
+                  Track every credit and debit transaction in real-time, monitor daily revenue trends, view commission splits, and easily reconcile payments.
                 </p>
               </motion.div>
 
@@ -70,10 +70,10 @@ export default function CorePhilosophy() {
                 <img src={limitedIcon} alt="Partnership" className="w-6 h-6 object-contain" />
               </div>
               <h3 className="text-base sm:text-lg font-bold text-[#1a2b49] mb-3 leading-snug">
-                We are not only limited to making things easy for consumers
+                Streamline supplier payments and automated settlements
               </h3>
               <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-normal">
-                We also facilitate our Insurer and Lending partners in the financial services industry to innovate & design customised products for Consumers leveraging our extensive data insights and data analytics capabilities.
+                Distribute payouts directly to bank accounts or UPI IDs. Set up instant settlements (T+0 cycle) to maintain healthy business liquidity and avoid payment delays.
               </p>
             </motion.div>
 

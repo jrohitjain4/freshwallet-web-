@@ -43,8 +43,8 @@ export default function Hero() {
               variants={itemVariants}
               className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#1a2b49] leading-[1.25] tracking-tight mb-6"
             >
-              We have built India&#39;s largest online platform for{' '}
-              <strong className="font-extrabold text-primary">Insurance & Lending</strong> products
+              We have built India&#39;s most powerful digital wallet for{' '}
+              <strong className="font-extrabold text-primary">Merchant Payments &amp; Payouts</strong>
             </motion.h1>
 
             {/* Sub-headline */}
@@ -52,7 +52,7 @@ export default function Hero() {
               variants={itemVariants}
               className="text-gray-600 text-base sm:text-lg mb-8 leading-relaxed font-normal max-w-xl"
             >
-              Empowering consumers and merchants across India with transparent access to insurance coverage, instant digital settlements, and tailored MSME credit solutions.
+              Accept instant UPI payments with custom QR codes, send secure bank payouts to suppliers, pay utility bills, and track business expenses with real-time ledger analytics.
             </motion.p>
 
             {/* Action Buttons */}
@@ -91,7 +91,7 @@ export default function Hero() {
             <div className="w-full max-w-lg lg:max-w-xl flex justify-center">
               <img 
                 src={heroGraphic} 
-                alt="FreshWallet Insurance and Lending Illustration" 
+                alt="FreshWallet Merchant Payments and Payouts Illustration" 
                 className="w-full h-auto max-h-[420px] object-contain drop-shadow-sm select-none"
               />
             </div>

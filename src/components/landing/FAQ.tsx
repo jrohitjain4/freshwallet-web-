@@ -9,32 +9,28 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: 'When did FreshWallet have its Initial Public Offer (IPO) and at what price?',
-      answer: 'FreshWallet went public on 15 Nov, 2021 with an issue price of ₹980 per share and listing price of ₹1150 per share.',
+      question: 'How do I start accepting UPI payments on FreshWallet?',
+      answer: 'You can instantly start accepting payments by generating a dynamic or static QR code from your dashboard. Customers can scan the QR code using any UPI app (GPay, PhonePe, Paytm, BHIM) to pay.',
     },
     {
-      question: 'What is the Corporate Identification Number of the company?',
-      answer: 'Corporate Identification Number (CIN) is L51909HR2008PLC037998.',
+      question: 'What are the charges for UPI payment collections?',
+      answer: 'FreshWallet offers zero-fee (0%) processing on all UPI QR code and soundbox collections, helping you save 100% on transaction charges.',
     },
     {
-      question: 'What is the ISIN Code of the company?',
-      answer: 'ISIN Code of the company is INE417T01026.',
+      question: 'When will the collected funds be settled to my bank account?',
+      answer: 'All collections are settled automatically on the same day (T+0 cycle) directly into your registered bank account. You can view details of the next scheduled settlement on your dashboard.',
     },
     {
-      question: 'On which Stock Exchanges are the shares of FreshWallet listed and traded?',
-      answer: 'The equity shares of the Company are listed and traded at National Stock Exchange of India Ltd. (NSE: FRESHWALLET) and Bombay Stock Exchange Ltd. (BSE: 543390).',
+      question: 'How do payouts and supplier payments work?',
+      answer: 'You can load money into your FreshWallet account via secure payment options and use it to instantly send payouts directly to any bank account or UPI ID.',
     },
     {
-      question: 'What is the Registered Office and Corporate Office Address of the Company?',
-      answer: 'Company has the same registered and corporate office: FreshWallet Limited, Plot 119, Sector 44, Gurugram- 122001, Haryana, India.',
+      question: 'How can I track my business expenses and download GST reports?',
+      answer: 'You can log business outflows under the "Add Expense" tab. Reconciled ledgers and itemized statements can be downloaded as GST-compliant reports from the dashboard for easy tax filing.',
     },
     {
-      question: 'What is the face value of the Shares of the Company?',
-      answer: 'Face Value of the equity shares of the Company is ₹2 per share.',
-    },
-    {
-      question: 'What is the Financial Year of the Company?',
-      answer: 'The Company’s financial year runs from 1st April to 31st March.',
+      question: 'Is my business data and transactions secure on FreshWallet?',
+      answer: 'Yes. FreshWallet uses bank-grade AES-256 data encryption, multi-factor verification, and real-time transaction fraud monitoring to keep your account, data, and payouts completely secure.',
     },
   ];
 

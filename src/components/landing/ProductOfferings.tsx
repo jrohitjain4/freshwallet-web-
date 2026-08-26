@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+import { QrCode, Send, Receipt, ShoppingCart, FileText } from 'lucide-react';
+
 import udyamAadhaarIcon from '../../assets/products/udyam-aadhaar-icon.svg';
 import shareMarketIcon from '../../assets/products/share-market-icon.svg';
 import onlinePurchasingIcon from '../../assets/products/online-purchasing-icon.svg';
@@ -10,10 +12,15 @@ export default function ProductOfferings() {
   const navigate = useNavigate();
 
   const offerings = [
-    { name: 'Udyam Aadhaar', icon: udyamAadhaarIcon, tag: 'MSME Business' },
-    { name: 'Share Market', icon: shareMarketIcon, tag: 'Stocks & Demat' },
-    { name: 'Online Purchasing', icon: onlinePurchasingIcon, tag: 'Flipkart & Amazon' },
-    { name: 'E-Mitra Services', icon: eMitraIcon, tag: 'Citizen Portal' },
+    { name: 'Udyam Aadhaar', icon: udyamAadhaarIcon, tag: 'MSME Business', bg: 'bg-orange-50/40 hover:bg-orange-100/60 border-orange-100/80 hover:border-orange-300' },
+    { name: 'Share Market', icon: shareMarketIcon, tag: 'Stocks & Demat', bg: 'bg-orange-50/40 hover:bg-orange-100/60 border-orange-100/80 hover:border-orange-300' },
+    { name: 'Online Purchasing', icon: onlinePurchasingIcon, tag: 'Flipkart & Amazon', bg: 'bg-orange-50/40 hover:bg-orange-100/60 border-orange-100/80 hover:border-orange-300' },
+    { name: 'E-Mitra Services', icon: eMitraIcon, tag: 'Citizen Portal', bg: 'bg-orange-50/40 hover:bg-orange-100/60 border-orange-100/80 hover:border-orange-300' },
+    { name: 'Generate QR', icon: QrCode, tag: 'Instant Payments', bg: 'bg-orange-50/40 hover:bg-orange-100/60 border-orange-100/80 hover:border-orange-300', iconColor: 'text-[#FF6B00]' },
+    { name: 'Send Money', icon: Send, tag: 'Bank Transfers', bg: 'bg-orange-50/40 hover:bg-orange-100/60 border-orange-100/80 hover:border-orange-300', iconColor: 'text-[#FF6B00]' },
+    { name: 'Pay Bills', icon: Receipt, tag: 'Utilities', bg: 'bg-orange-50/40 hover:bg-orange-100/60 border-orange-100/80 hover:border-orange-300', iconColor: 'text-[#FF6B00]' },
+    { name: 'Add Expense', icon: ShoppingCart, tag: 'Track Outflow', bg: 'bg-red-50/40 hover:bg-red-100/60 border-red-100/80 hover:border-red-300', iconColor: 'text-red-500' },
+    { name: 'GST Reports', icon: FileText, tag: 'Tax & Compliance', bg: 'bg-amber-50/40 hover:bg-amber-100/60 border-amber-100/80 hover:border-amber-300', iconColor: 'text-amber-500' },
   ];
 
   const groupBrands = [
@@ -35,13 +42,13 @@ export default function ProductOfferings() {
           </h2>
 
           {/* Cards Grid matching screenshot layout */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
             {offerings.map((item) => (
               <motion.div
                 key={item.name}
                 whileHover={{ y: -4, boxShadow: '0 10px 24px rgba(0,0,0,0.06)' }}
                 onClick={() => navigate('/login')}
-                className="relative bg-orange-50/40 hover:bg-orange-100/60 border border-orange-100/80 hover:border-orange-300 rounded-2xl p-6 flex flex-col items-center justify-between text-center transition-all cursor-pointer min-h-[160px] group"
+                className={`relative border rounded-2xl p-6 flex flex-col items-center justify-between text-center transition-all cursor-pointer min-h-[160px] group ${item.bg}`}
               >
                 {/* Optional Tag Badge */}
                 {item.tag && (
@@ -52,7 +59,11 @@ export default function ProductOfferings() {
 
                 {/* Product Icon */}
                 <div className="w-16 h-16 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                  <img src={item.icon} alt={item.name} className="max-w-full max-h-full object-contain" />
+                  {typeof item.icon === 'string' ? (
+                    <img src={item.icon} alt={item.name} className="max-w-full max-h-full object-contain" />
+                  ) : (
+                    <item.icon className={`w-12 h-12 stroke-[1.5] ${item.iconColor || 'text-primary'}`} />
+                  )}
                 </div>
 
                 {/* Product Name */}
