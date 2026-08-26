@@ -57,7 +57,7 @@ const termsContent = [
   },
   {
     title: 'Contact',
-    text: 'FreshWallet Private Limited, SF-44B, JTM Mall, Opposite Railway Apartments, Jagatpura, Jaipur–302017.\nEmail: Support@freshwallet.com | Phone: 9660423839 | Website: https://freshwallet.in'
+    text: 'FreshWallet Private Limited, SF-44B, JTM Mall, Opposite Railway Apartments, Jagatpura, Jaipur–302017.\nEmail: Support@freshwallet.com | Phone: 9672863054 / 9660423839 | Website: https://freshwallet.in'
   }
 ];
 
@@ -104,7 +104,7 @@ const privacyContent = [
   },
   {
     title: 'Contact',
-    text: 'FreshWallet Private Limited, SF-44B, JTM Mall, Opposite Railway Apartments, Jagatpura, Jaipur–302017.\nEmail: Support@freshwallet.com | Phone: 9660423839 | Website: https://freshwallet.in'
+    text: 'FreshWallet Private Limited, SF-44B, JTM Mall, Opposite Railway Apartments, Jagatpura, Jaipur–302017.\nEmail: Support@freshwallet.com | Phone: 9672863054 / 9660423839 | Website: https://freshwallet.in'
   }
 ];
 
@@ -129,12 +129,12 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#f4f7fc] text-gray-500 py-8 px-4 sm:px-8 border-t border-gray-200/80 text-xs">
       <div className="max-w-6xl mx-auto space-y-4 text-center">
-        
+
         {/* Brand Logo */}
         <div className="flex justify-center mb-2">
           <img src={logo} alt="FreshWallet Logo" className="h-10 w-auto" />
         </div>
-        
+
         {/* Footer Links matching exact PB Fintech footer */}
         <div className="flex flex-wrap items-center justify-center gap-3 text-gray-600">
           <a href="#" onClick={openPrivacy} className="text-primary font-bold hover:underline transition-colors">Privacy Policy</a>
@@ -158,14 +158,14 @@ export default function Footer() {
       {modalType && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4 overflow-hidden">
           <div className="bg-white rounded-3xl w-full max-w-2xl max-h-[85vh] shadow-2xl flex flex-col border border-gray-100 overflow-hidden relative animate-in fade-in zoom-in-95 duration-200">
-            
+
             {/* Header */}
             <div className="px-6 py-5 border-b border-gray-100 flex items-center justify-between">
               <h2 className="text-lg sm:text-xl font-extrabold text-[#1a2b49]">
                 {modalType === 'privacy' ? 'FreshWallet Privacy Policy' : 'FreshWallet Terms & Conditions'}
               </h2>
-              <button 
-                onClick={closeModal} 
+              <button
+                onClick={closeModal}
                 className="p-1.5 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100 transition-colors"
                 aria-label="Close"
               >
@@ -189,7 +189,7 @@ export default function Footer() {
 
             {/* Footer */}
             <div className="px-6 py-4 border-t border-gray-100 flex justify-end bg-gray-50/50">
-              <button 
+              <button
                 onClick={closeModal}
                 className="bg-primary hover:bg-orange-600 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl transition-colors shadow-xs"
               >

@@ -18,13 +18,12 @@ export default function ContactSection() {
             <div className="space-y-2 text-xs text-gray-600">
               <div className="w-full h-1 bg-[#FF6B00] rounded-full mb-4" />
               <p className="text-gray-400 font-medium">Write to us at:</p>
-              <p className="font-bold text-sm text-[#1a2b49]">Gaurav</p>
-              <p className="text-gray-500">Head, Investor Relations</p>
-              <a href="mailto:gaurav@freshwallet.in" className="text-primary hover:underline block font-semibold pt-2">
-                gaurav@freshwallet.in
+              <p className="font-bold text-sm text-[#1a2b49]">Krishna Kumawat</p>
+              <a href="mailto:krishna@freshwallet.in" className="text-primary hover:underline block font-semibold pt-1">
+                krishna@freshwallet.in
               </a>
-              <a href="tel:+919660423839" className="text-gray-700 hover:text-primary block font-medium">
-                Phone: +91 96604 23839
+              <a href="tel:+919672863054" className="text-gray-700 hover:text-primary block font-medium">
+                Phone: +91 96728 63054
               </a>
             </div>
 
@@ -32,9 +31,8 @@ export default function ContactSection() {
             <div className="space-y-2 text-xs text-gray-600">
               <div className="w-full h-1 bg-[#8b5cf6] rounded-full mb-4" />
               <p className="text-gray-400 font-medium">Compliance officer:</p>
-              <p className="font-bold text-sm text-[#1a2b49]">Gaurav</p>
-              <p className="text-gray-500">Company Secretary & Compliance Officer</p>
-              <a href="mailto:gaurav@freshwallet.in" className="text-primary hover:underline block font-semibold">
+              <p className="font-bold text-sm text-[#1a2b49]">Gaurav Mahawar</p>
+              <a href="mailto:gaurav@freshwallet.in" className="text-primary hover:underline block font-semibold pt-1">
                 gaurav@freshwallet.in
               </a>
               <p>Contact No. +91 96604 23839</p>
@@ -49,7 +47,7 @@ export default function ContactSection() {
               <p className="text-gray-400 font-medium">Registered address:</p>
               <p className="font-bold text-sm text-[#1a2b49]">FreshWallet Limited</p>
               <p>SF-44B, JTM mall, Opposite railway apartments, Jagatpura, Jaipur</p>
-              <p>Phone No: +91 96604 23839</p>
+              <p>Phone No: +91 96728 63054 / +91 96604 23839</p>
             </div>
 
           </div>

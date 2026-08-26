@@ -12,7 +12,6 @@ export default function Navbar() {
     { name: 'About', href: '#about' },
     { name: 'What we do', href: '#what-we-do' },
     { name: 'What sets us apart', href: '#what-sets-us-apart' },
-    { name: 'Investor relations', href: '#stats' },
     { name: 'FAQs', href: '#faqs' },
     { name: 'Contact', href: '#contact' },
   ];

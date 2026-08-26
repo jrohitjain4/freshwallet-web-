@@ -3,7 +3,6 @@ import Hero from '../components/landing/Hero';
 import CorePhilosophy from '../components/landing/CorePhilosophy';
 import ProductOfferings from '../components/landing/ProductOfferings';
 import WhatSetsUsApart from '../components/landing/WhatSetsUsApart';
-import InvestorRelations from '../components/landing/InvestorRelations';
 import FAQ from '../components/landing/FAQ';
 import ContactSection from '../components/landing/ContactSection';
 import Footer from '../components/landing/Footer';
@@ -17,7 +16,6 @@ export default function WelcomePage() {
         <CorePhilosophy />
         <ProductOfferings />
         <WhatSetsUsApart />
-        <InvestorRelations />
         <FAQ />
         <ContactSection />
       </main>
